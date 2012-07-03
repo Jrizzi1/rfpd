@@ -1,0 +1,51 @@
+<h1>Meetings</h1>
+<% if flash[:notice] %>
+<div id="flash_notice"><%= h flash[:notice] %></div>
+<% end %>	
+
+<%= form_tag meetings_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<%#= render @search_meetings %>
+<div class="meeting_list">
+	<h2> search Results</h2>
+	<ul>	
+    <% for meeting in @search_meetings %>
+    <li><%= link_to h(meeting.name), meeting_path(:id => meeting.id) %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="meeting_list">
+	<h2> Upcoming Meetings</h2>
+	<ul>
+		<% for meeting in @upcoming_meetings %>
+		<li><%= link_to h(meeting.name), meeting_path(:id => meeting.id) %> 
+		</li>
+		<% end %>
+		<% no_meetings(@upcoming_meetings) %>
+	</ul>
+	<p class="add">
+	<%= link_to "add_meeting", :controller => "meetings",
+								:action => "new" %>
+	</p>
+	
+</div>
+
+<div class="meeting_list">
+	<h2> Past Meetings</h2>
+	<ul>
+		<% for meeting in @past_meetings %>
+		<li><%= link_to h(meeting.name), meeting_path(:id => meeting.id) %> 
+		</li>
+		<% end %>		
+	</ul>
+</div>
+
+
+<p>Find me in app/views/meetings/index.html.erb</p>

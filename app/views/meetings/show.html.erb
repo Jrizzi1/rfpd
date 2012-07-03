@@ -1,0 +1,22 @@
+<h1>  
+	<%= link_to "Meetings", {:action =>"index" }, :class => "cancel" %>
+  &rarr; <%=h @meeting.name%>
+</h1>
+
+<div class="details">
+	<dl>
+		<% meeting = @meeting %>
+		<dt>When:</dt><dd><%=h meeting.name %></dd>
+		<dt>Location:</dt><dd><%=h meeting.location %></dd>
+		<dt>Description:</dt><dd><%=h meeting.description %></dd>
+	</dl>
+
+<h2>Presentations</h2>
+<ul id="presentations"></ul>
+<p class="modify">
+  <%= link_to 'Edit', edit_meeting_path(@meeting) %>  |
+  <%= link_to 'Destroy', @meeting, :confirm => "are you sure?", :method => :delete %> 
+
+</p>
+
+</div>

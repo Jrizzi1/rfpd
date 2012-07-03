@@ -1,0 +1,8 @@
+	<%= form_for :meeting, :url => {:action=>"create"} do |f| %>
+		<%= f.label :meets_on%>:<br />
+		<%= f.date_select :meets_on %><br />
+		<%= f.label :location%>:<br />
+		<%= f.text_field :location, :size=> 35, :class=>"text" %><br />
+		<%= f.label :description%>:<br />
+		<%= f.text_area :description , :rows=> 4, :class=>"text" %><br />
+  <%= f.submit %>

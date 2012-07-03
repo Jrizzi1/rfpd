@@ -1,0 +1,199 @@
+  [1m[36m (57.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (1.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (10.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (26.0ms)[0m  [1mINSERT INTO `meetings` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:56', '2012-07-03 14:27:56', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `meetings` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:56', '2012-07-03 14:27:56', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `presentations`[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:56', '2012-07-03 14:27:56', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:56', '2012-07-03 14:27:56', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `users`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:57', '2012-07-03 14:27:57', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:27:57', '2012-07-03 14:27:57', 298486374)
+  [1m[36m (7.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (44.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (0.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (1.0ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (1.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (1.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-06-03 14:34:18', 'University Library', 'Rails Hackfest', '2012-07-03 14:34:18', '2012-07-03 14:34:18', 245762051)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-07-03 10:34:18', 'University Library', 'Rails Hackfest', '2012-07-03 14:34:18', '2012-07-03 14:34:18', 162038719)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-08-03 14:34:18', 'University Library', 'Rails Hackfest', '2012-07-03 14:34:18', '2012-07-03 14:34:18', 581005298)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `presentations`
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:34:18', '2012-07-03 14:34:18', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:34:18', '2012-07-03 14:34:18', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:34:18', '2012-07-03 14:34:18', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:34:18', '2012-07-03 14:34:18', 298486374)[0m
+  [1m[35m (5.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (1.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (1.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-06-03 14:41:51', 'University Library', 'Rails Hackfest', '2012-07-03 14:41:51', '2012-07-03 14:41:51', 245762051)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-07-03 10:41:51', 'University Library', 'Rails Hackfest', '2012-07-03 14:41:51', '2012-07-03 14:41:51', 162038719)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-08-03 14:41:51', 'University Library', 'Rails Hackfest', '2012-07-03 14:41:51', '2012-07-03 14:41:51', 581005298)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `presentations`
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:41:51', '2012-07-03 14:41:51', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:41:51', '2012-07-03 14:41:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:41:51', '2012-07-03 14:41:51', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:41:51', '2012-07-03 14:41:51', 298486374)[0m
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (22.0ms)[0m  [1mSELECT COUNT(*) FROM `meetings` [0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `meetings` (`created_at`, `description`, `location`, `meets_on`, `updated_at`) VALUES ('2012-07-03 14:41:51', 'lightning Talks', 'university Library', '2008-01-01', '2012-07-03 14:41:51')[0m
+  [1m[32mSOLR Request (2055.0ms)[0m  [ path=#<RSolr::Client:0x3bf7de0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Meeting 980190963</field><field name="type">Meeting</field><field name="type">ActiveRecord::Base</field><field name="class_name">Meeting</field><field name="location_text">university Library</field><field name="name_text">January  1, 2008</field><field name="description_text">lightning Talks</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8981/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (1.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[36m (1.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-06-03 14:53:26', 'University Library', 'Rails Hackfest', '2012-07-03 14:53:26', '2012-07-03 14:53:26', 245762051)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-07-03 10:53:26', 'University Library', 'Rails Hackfest', '2012-07-03 14:53:26', '2012-07-03 14:53:26', 162038719)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-08-03 14:53:26', 'University Library', 'Rails Hackfest', '2012-07-03 14:53:26', '2012-07-03 14:53:26', 581005298)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `presentations`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:53:27', '2012-07-03 14:53:27', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:53:27', '2012-07-03 14:53:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:53:27', '2012-07-03 14:53:27', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:53:27', '2012-07-03 14:53:27', 298486374)[0m
+  [1m[35m (22.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `meetings` [0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `meetings` (`created_at`, `description`, `location`, `meets_on`, `updated_at`) VALUES ('2012-07-03 14:53:27', 'lightning Talks', 'university Library', '2008-01-01', '2012-07-03 14:53:27')[0m
+  [1m[32mSOLR Request (2006.2ms)[0m  [ path=#<RSolr::Client:0x3d53e28> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Meeting 980190964</field><field name="type">Meeting</field><field name="type">ActiveRecord::Base</field><field name="class_name">Meeting</field><field name="location_text">university Library</field><field name="name_text">January  1, 2008</field><field name="description_text">lightning Talks</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8981/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (1.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[36m (1.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-06-03 14:55:09', 'University Library', 'Rails Hackfest', '2012-07-03 14:55:09', '2012-07-03 14:55:09', 245762051)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-07-03 10:55:09', 'University Library', 'Rails Hackfest', '2012-07-03 14:55:09', '2012-07-03 14:55:09', 162038719)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-08-03 14:55:09', 'University Library', 'Rails Hackfest', '2012-07-03 14:55:09', '2012-07-03 14:55:09', 581005298)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `presentations`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:55:09', '2012-07-03 14:55:09', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:55:09', '2012-07-03 14:55:09', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:55:09', '2012-07-03 14:55:09', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:55:09', '2012-07-03 14:55:09', 298486374)[0m
+  [1m[35m (20.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `meetings` [0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `meetings` (`created_at`, `description`, `location`, `meets_on`, `updated_at`) VALUES ('2012-07-03 14:55:09', 'lightning Talks', 'university Library', '2008-01-01', '2012-07-03 14:55:09')[0m
+  [1m[32mSOLR Request (2006.2ms)[0m  [ path=#<RSolr::Client:0x3ce7de0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Meeting 980190965</field><field name="type">Meeting</field><field name="type">ActiveRecord::Base</field><field name="class_name">Meeting</field><field name="location_text">university Library</field><field name="name_text">January  1, 2008</field><field name="description_text">lightning Talks</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8981/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (0.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (1.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (60.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE `meetings`.`id` = 162038719 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (1.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `meetings`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-06-03 14:58:23', 'University Library', 'Rails Hackfest', '2012-07-03 14:58:23', '2012-07-03 14:58:23', 245762051)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-07-03 10:58:23', 'University Library', 'Rails Hackfest', '2012-07-03 14:58:23', '2012-07-03 14:58:23', 162038719)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `meetings` (`meets_on`, `location`, `description`, `created_at`, `updated_at`, `id`) VALUES ('2012-08-03 14:58:23', 'University Library', 'Rails Hackfest', '2012-07-03 14:58:23', '2012-07-03 14:58:23', 581005298)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `presentations`
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:58:24', '2012-07-03 14:58:24', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `presentations` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:58:24', '2012-07-03 14:58:24', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:58:24', '2012-07-03 14:58:24', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2012-07-03 14:58:24', '2012-07-03 14:58:24', 298486374)[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `meetings` [0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `meetings` (`created_at`, `description`, `location`, `meets_on`, `updated_at`) VALUES ('2012-07-03 14:58:24', 'lightning Talks', 'university Library', '2008-01-01', '2012-07-03 14:58:24')[0m
+  [1m[32mSOLR Request (2012.2ms)[0m  [ path=#<RSolr::Client:0x3c07b18> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Meeting 980190966</field><field name="type">Meeting</field><field name="type">ActiveRecord::Base</field><field name="class_name">Meeting</field><field name="location_text">university Library</field><field name="name_text">January  1, 2008</field><field name="description_text">lightning Talks</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8981/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (1.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (3.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (1.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE (meets_on <= CURRENT_TIMESTAMP()) ORDER BY meets_on[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMeeting Load (0.0ms)[0m  SELECT `meetings`.* FROM `meetings` WHERE (meets_on > CURRENT_TIMESTAMP()) ORDER BY meets_on
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMeeting Load (0.0ms)[0m  [1mSELECT `meetings`.* FROM `meetings` WHERE `meetings`.`id` = 162038719 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
